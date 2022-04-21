@@ -42,27 +42,27 @@
 <h3>Contact Form</h3>
 
 <div class="container">
-    <label for="fname" >First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <label for="firstName" >Nome</label>
+    <input type="text" id="firstName" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="lastName">Sobrenome</label>
+    <input type="text" id="lastName" name="lastname" placeholder="Your last name..">
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <label for="subject">Resumo do assunto</label>
+    <input type="text" id="subject" name="subject" placeholder="Your last name..">
 
-    <input type="button" value="Submit" onclick="myfunction(document.getElementById('fname').value,
-                                                            document.getElementById('lname').value,
-                                                            document.getElementById('subject').value)">
+    <label for="body">Detalhes</label>
+    <textarea id="body" name="body" placeholder="Digite algo.." style="height:200px"></textarea>
+
+    <input type="button" value="Submit" onclick="myfunction(document.getElementById('firstName').value,
+                                                            document.getElementById('lastName').value,
+                                                            document.getElementById('subject').value,
+                                                            document.getElementById('body').value)">
 </div>
 
 <script type = "text/javascript">
-    function myfunction(firstname, lastname, subject) {
-        //alert(firstname);
-        //alert(lastname);
-        //alert(subject);
-
-        window.location.href = `mailto:sidney@breesait.com?subject=${firstname} ${lastname}&body=${subject}`;
+    function myfunction(firstname, lastname, subject, body) {
+        window.location.href = `mailto:sidney@breesait.com?subject=${subject}&body=${body}`;
     }
 </script>
 </body>
